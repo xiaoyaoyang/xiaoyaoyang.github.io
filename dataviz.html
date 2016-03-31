@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Data Visualization for 2008 US Campaign">
+    <meta name="author" content="Xiaoyao Yang">
+
+    <script type="text/javascript" src="d3/d3.js"></script>
+
+    <title>Data Visualization</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="b3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dataviz.css" rel="stylesheet">
+
+    
+  
+  </head>
+
+  <body>
+
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="page-header">
+        <h1>Data Visualization with D3.js<br><small>Xiaoyao Yang</small></h1>
+      </div>
+      <h3>Introduction</h3>
+      <p>In this homework, instead of presenting a well-structure paper, I wrote down the my visualization learning process. My ultimate goal is to draw an interactive histogram of loan data, to show the distribution of : </p>
+      <ul>
+          <li>debt-to-income ratio</li>
+          <li>credit score</li>
+          <li>inquiries</li>
+      </ul>
+
+      <h3>Old Graphs</h3>
+       <div id="plot-area"></div>
+       <p id="click-scatter"><strong><em>Click this text to change scatter plot!!</em></strong></p>
+       <div id="plot-area-2"></div>
+       <p id="click-bar"><strong><em>Click this text to change data for Bar Plot!</em></strong></p>
+       <div id="creditBar"></div>
+       <p id="click-bar2"><strong><em>Click this text to see Credit Score Histogram!</em></strong></p>
+       <del>
+       <h4>As for requirement</h4>
+        <ol>
+          <li>I already descripted the graph I tried to make, it is a histogram of Debt-to-Income Ratio.</li>
+          <li>My data has two columns and 15 rows. First column is different interval of DTI, while corresponding second column is how many DTI belongs to that interval</li>
+          <li>I created data as csv file</li>
+          <li>I added one line <em>console.log(JSON.stringify(dat));</em> in my barplot2.js file so that if you open the Chrome Console, you will see that our data is loaded.</li>
+          <li>I added several comments in barplot2.js file</li>
+        </ol>
+        <h4>More about this Graph</h4>
+        <p>I also added mouse over feature into barplot. And the color of Bar should vary based on freqency value (obviously there is a bug-- olor looks right only after mouse over). Tooltips were also added as a part of mouse over features. As we can see, with so many tools provided by d3.js, it is possible to draw fancy interactive chart! (click button to subset data probably use on('click') method.)</p>
+        <h3>What's next</h3>
+        <p>Next, I am trying to fix fews bug here (fill color, read and use data more decent). And I also heard of d3.histogram layout. Instead of preparing data as table form in R and visualizing in d3, we can read original raw data and let d3 to calculate frequency for us. However, I think probably d3.js is good at visualization not handling data? We will find out.</p>
+        </del>
+
+        <h3>Update: two new interactive graphs (12/01/14)</h3>
+        <ul>
+            <li><a href="single_hist.html">Interactive Histogram using d3 layout</a></li>
+            <li><a href="hist_interactive.html">More complex interactive scatter/histogram</a>(including time zone selection)</li>
+        </ul>
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <script src="js/scatter_demo.js"></script>
+    <script src="js/barPlot.js"></script>
+    <script src="js/barplot2.js"></script>
+
+    
+ 
+    
+  
+
+    
+
+
+
+
+
+
+
+    <footer class="footer">
+      <div class="container">
+      <div class="pull-right">
+        <p class="text-muted">Xiaoyao Yang</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="b3/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+
