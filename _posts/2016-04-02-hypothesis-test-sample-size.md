@@ -104,7 +104,8 @@ power.t.test(delta=delta,sd=pool_sd,sig.level=alpha,power=1-beta,type="two.sampl
 ## NOTE: n is number in *each* group
 ```
 
-##Conclusion
+
+## Conclusion
 
 Statistical A/B test or hypothesis test, is a very good technique to solve real world problem. However, understanding more about underlying assumption and requirement is important in real world. In statistical world, there is no "yes or no", only good or bad.
 
