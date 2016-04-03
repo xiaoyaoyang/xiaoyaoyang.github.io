@@ -1,13 +1,13 @@
 # Site settings
 title: Hi. I'm Xiaoyao
 navtitle: XIAOYAO YANG
-header-img: img/home-bg.jpg
+header-img: img/new-york.jpg
 email: robinxiaoyaoyang@gmail.com
 copyright_name: Xiaoyao Yang
 description: "In God we trust, all others bring data."
 baseurl: ""
-url: "http://http://xiaoyaoyang.github.io"
-twitter_username: SBootstrap
+url: "http://xiaoyaoyang.github.io"
+twitter_username:
 github_username:  xiaoyaoyang
 facebook_username:  xiaoyaoyoung
 email_username:  robinxiaoyaoyang@gmail.com
