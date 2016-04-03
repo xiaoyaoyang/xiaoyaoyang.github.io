@@ -3,7 +3,7 @@ layout:     post
 title: "Hypothesis Test Sample Size and Power"
 subtitle:   ""
 date:       2016-04-02
-author:     "Free Young"
+author:     "Xiaoyao Yang"
 header-img: "img/post-bg-05.jpg"
 ---
 
