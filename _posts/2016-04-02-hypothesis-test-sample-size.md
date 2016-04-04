@@ -4,7 +4,7 @@ title: "Hypothesis Test Sample Size and Power"
 subtitle:   ""
 date:       2016-04-02
 author:     "Xiaoyao Yang"
-header-img: "img/post-bg-05.jpg"
+header-img: "img/post-bg-04.jpg"
 ---
 
 
