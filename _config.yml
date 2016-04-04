@@ -13,6 +13,9 @@ facebook_username:  xiaoyaoyoung
 email_username:  robinxiaoyaoyang@gmail.com
 linkedin_username: xiaoyaoyang
 
+# To enable google analytics, supply your token below
+analytics-google: 'UA-75919974-1'
+
 
 # Build settings
 markdown: kramdown
