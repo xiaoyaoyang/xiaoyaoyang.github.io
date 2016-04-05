@@ -7,7 +7,6 @@ author:     "Free Young"
 header-img: "img/post-bg-05.jpg"
 ---
 
-
 These is all start from the moment when I saw the post: <http://datapirates.blogspot.de/2016/03/why-ab-testing-sucks.html>. It claims A/B test, which is exactly two sample t test, is useless. Below is simulation running with R.
 
 ## Lets do some experiments!
