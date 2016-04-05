@@ -3,5 +3,7 @@
 .Rhistory
 .RData
 _site/
+site/_site/
 .sass-cache/
 .R
+xiaoyaoyang.github.io.Rproj
