@@ -5,8 +5,9 @@ header-img: img/new-york.jpg
 email: robinxiaoyaoyang@gmail.com
 copyright_name: Xiaoyao Yang
 description: "In God we trust, all others bring data."
-baseurl: ""
+#baseurl: ""
 url: "http://xiaoyaoyang.github.io"
+#permalink: /:year/:month/:title.html
 twitter_username:
 github_username:  xiaoyaoyang
 facebook_username:  xiaoyaoyoung
