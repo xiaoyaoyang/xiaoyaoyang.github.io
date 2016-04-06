@@ -7,7 +7,7 @@ author:     "Free Young"
 header-img: "img/post-bg-05.jpg"
 ---
 
-These is all start from the moment when I saw the post: <http://datapirates.blogspot.de/2016/03/why-ab-testing-sucks.html>. It claims A/B test, which is exactly two sample t test, is useless. Below is simulation running with R.
+These are all start from the moment when I saw the post: <http://datapirates.blogspot.de/2016/03/why-ab-testing-sucks.html>. It claims A/B test, which is exactly two sample t test, is useless. Below is simulation running with R.
 
 ## Lets do some experiments!
 
@@ -47,7 +47,7 @@ Next, lets calculate the possible maximum power given alpha, sample size, altern
 
 
 
-```{r, echo=TRUE,tidy=TRUE,cache=FALSE}
+```{r, echo=FALSE,tidy=TRUE,cache=FALSE}
 power_plot <- function(sample_size=700,ifplot=FALSE){
 alpha <- 0.05
 delta <- 0.05
@@ -99,6 +99,7 @@ c2 <- qnorm(p = 1-beta,mean = 0,sd = 1)
 power.t.test(delta=delta,sd=pool_sd,sig.level=alpha,power=1-beta,type="two.sample",alternative="one.sided")
 
 ```
+
 
 ##Conclusion
 

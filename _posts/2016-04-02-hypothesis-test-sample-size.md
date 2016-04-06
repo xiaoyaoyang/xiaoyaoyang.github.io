@@ -7,7 +7,7 @@ author:     "Free Young"
 header-img: "img/post-bg-05.jpg"
 ---
 
-These is all start from the moment when I saw the post: <http://datapirates.blogspot.de/2016/03/why-ab-testing-sucks.html>. It claims A/B test, which is exactly two sample t test, is useless. Below is simulation running with R.
+These are all start from the moment when I saw the post: <http://datapirates.blogspot.de/2016/03/why-ab-testing-sucks.html>. It claims A/B test, which is exactly two sample t test, is useless. Below is simulation running with R.
 
 ## Lets do some experiments!
 
@@ -56,29 +56,6 @@ Next, lets calculate the possible maximum power given alpha, sample size, altern
 
 
 
-{% highlight r %}
-power_plot <- function(sample_size = 700, ifplot = FALSE) {
-    alpha <- 0.05
-    delta <- 0.05
-    degree <- 2 * (sample_size - 1)
-    pool_sd <- sqrt((var(a) + var(b))/2)
-    c <- qt(1 - alpha, degree)
-    ncp <- delta * sqrt(sample_size/2)/pool_sd
-    power <- 1 - pt(q = c, df = degree, ncp = ncp)
-    x <- seq(-3, 3, 0.01)
-    title <- paste("Distribution of Null/alternative hypothesis for sample size=", 
-        sample_size)
-    if (ifplot == TRUE) {
-        plot(x, dt(x, degree), type = "l", ylab = "Probability", main = title)
-        lines(x, dt(x, degree, ncp), type = "l", col = "red")
-    }
-    return(power)
-}
-power.vector <- vector()
-for (i in 100:1000) {
-    power.vector[i - 99] <- power_plot(sample_size = i)
-}
-{% endhighlight %}
 
 
 ![plot of chunk unnamed-chunk-4](/figure/source/2016-04-02-hypothesis-test-sample-size/unnamed-chunk-4-1.png)
@@ -142,6 +119,7 @@ power.t.test(delta=delta,sd=pool_sd,sig.level=alpha,power=1-beta,type="two.sampl
 ## 
 ## NOTE: n is number in *each* group
 {% endhighlight %}
+
 
 ##Conclusion
 
