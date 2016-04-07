@@ -17,15 +17,13 @@ Cheers
 - [ ] Fix post formula 
 
 #calculate sample size 
-##binomial model
-alpha <- 0.05
-beta <- 0.2
-delta <- 0.05
-p1 <- 0.2;p2 <- 0.15
+##two sample z test (binomial) model
+alpha <- 0.1
+beta <- 0.1
+p1 <- 0.5;p2 <- 0.55;delta <- abs(p1-p2)
 p.sd <- sqrt(p1*(1-p1)+p2*(1-p2))
 c1 <- qnorm(p = 1-alpha,mean = 0,sd = 1)
 c2 <- qnorm(p = beta,mean = 0,sd = 1)
 (n <- (p.sd*(c1-c2)/delta)^2)
-
-
-(ideal_sample_norm <- 2*(c1-c2)^2/(delta/p.sd)^2)
+#use build in function
+power.prop.test(power=.9,p1=.55,p2=.5,sig.level=0.1,alternative = "one.sided")
