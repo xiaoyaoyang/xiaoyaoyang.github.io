@@ -3,8 +3,8 @@ layout:     post
 title: "Hypothesis Test Sample Size and Power"
 subtitle:   ""
 date:       2016-04-02
-author:     "Free Young"
-header-img: "img/post-bg-05.jpg"
+author:     "Xiaoyao Yang"
+header-img: "img/post-bg-03.jpg"
 ---
 
 These are all start from the moment when I saw the post: <http://datapirates.blogspot.de/2016/03/why-ab-testing-sucks.html>. It claims A/B test, which is exactly two sample t test, is useless. Below is simulation running with R.
@@ -101,7 +101,7 @@ power.t.test(delta=delta,sd=sqrt(pool.sd^2/2),sig.level=alpha,power=1-beta,type=
 
 ```
 
-First, Sorry for my messy R code standard..Anyway, the first method is based on normal distribution. But there is a little flaw here since I use "sample pool variance"" to replace variance under assumption distribution, and mean variance is the function of sample size. It is interesting that I found in **power.t.test** function, the sd is standard deviation in each group, not mean variance or total variance... (Actually I just followed formula I found online here). 
+First, Sorry for my messy R code standard..Anyway, the first method is based on normal distribution. But there is a little flaw here since I use "sample pool variance"" to replace variance under assumption distribution, and mean variance is the function of sample size. It is interesting that I found in **power.t.test** function, the sd is standard deviation in each group, not mean variance or total variance... (Actually I just followed formula I found online above). 
 
 After trying to derive sample estimatation formula by myself, I have following result:
 
@@ -123,6 +123,7 @@ power.prop.test(power=.8,p1=.15,p2=.2,sig.level=0.05,alternative = "one.sided")
 ```
 
 This feel more precise for me. Pretty consistent result A-ha !
+
 
 ##Conclusion
 

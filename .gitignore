@@ -3,6 +3,7 @@
 .Rhistory
 .RData
 _site/
+data/
 site/_site/
 .sass-cache/
 .R
